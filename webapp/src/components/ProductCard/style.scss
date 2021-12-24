@@ -1,0 +1,19 @@
+.product {
+  background-color: #eee;
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.product .card {
+  margin: 10px;
+  border-radius: 15px;
+}
+.product
+{
+  .ant-card
+  {
+    padding: 8px;
+    border-radius: 15px;
+  }
+}
