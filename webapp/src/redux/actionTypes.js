@@ -4,5 +4,6 @@ const actionTypes = {
   GET_DATA_FAILURE: "GET_DATA_FAILURE",
   ADD_TO_BASKET: "ADD_TO_BASKET",
   REMOVE_FROM_BASKET: "REMOVE_FROM_BASKET",
+  UPDATE_AMOUNT: "UPDATE_AMOUNT",
 };
 export default actionTypes;

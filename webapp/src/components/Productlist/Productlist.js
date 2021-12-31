@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 import ProductCard from "../ProductCard/ProductCard";
 import ProductActions from "../../redux/products/ProductsAction";
 
+
 const Productlist = () => {
   const dispatch = useDispatch();
   const { loading, error, data } = useSelector(
@@ -13,13 +14,13 @@ const Productlist = () => {
   useEffect(() => {
     dispatch(ProductActions.getProducts());
   }, []);
-  if (loading || !data.length) return <Skeleton />;
+  if (loading || !data.length) return <Skeleton active />;
   if (error) return <div> somthing went wrong!!!</div>;
   if (data.length) {
     {
       return (
         <Row
-          style={{ backgroundColor: "#eee", marginTop: 15, borderRadius: 15 }}  
+          style={{ backgroundColor: "#eee", marginTop: 15, borderRadius: 15 }}
           gutter={[0, 15]}
         >
           {data.map((item) => (

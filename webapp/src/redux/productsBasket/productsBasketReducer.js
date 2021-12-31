@@ -1,20 +1,30 @@
 import actionTypes from "../actionTypes";
 
 const initionallstate = {
-  selectProduct: [],
-  loading: true,
+  selectedProduct: [],
 };
 
 export const ProductBasketReducer = (state = initionallstate, action) => {
   switch (action.type) {
-    case actionTypes.GET_DATA_START:
-      return { ...state, loading: true };
     case actionTypes.ADD_TO_BASKET:
       return {
         ...state,
-        selectProduct: [...state.selectProduct, action.payload],
+        selectedProduct: [...state.selectedProduct, action.payload],
       };
-
+    case actionTypes.UPDATE_AMOUNT:
+      return {
+        ...state,
+        selectedProduct: state.selectedProduct.map((item) => {
+          return item.id === action.payload.id ? action.payload : item;
+        }),
+      };
+    case actionTypes.REMOVE_FROM_BASKET:
+      return {
+        ...state,
+        selectedProduct: state.selectedProduct.filter((item) => 
+          item.id !== action.payload
+        ),
+      };
     default:
       return state;
   }

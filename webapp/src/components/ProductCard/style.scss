@@ -9,11 +9,13 @@
   margin: 10px;
   border-radius: 15px;
 }
-.product
-{
-  .ant-card
-  {
+.product {
+  .ant-card {
     padding: 8px;
     border-radius: 15px;
   }
+}
+.buttom:hover {
+  color: rgb(6, 159, 248) !important;
+  background-color: rgb(9, 26, 80) !important;
 }
