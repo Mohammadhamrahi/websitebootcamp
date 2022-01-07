@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import Searchbox from "../searchbox/searchbox";
 import ShopingCart from "../shopingcart/ShopingCart";
 import { useSelector } from "react-redux";
+import { HomeOutlined } from "@ant-design/icons";
+import Category from "../Category/Category";
 
 const Header = () => {
   const basket = useSelector(
@@ -45,7 +47,11 @@ const Header = () => {
     <Row>
       <Col xs={12} md={6} lg={24}>
         <div className="header">
-          <Popover content={content()} title="لیست خرید" trigger="click">
+          <Popover
+            style={{ background: "#eee" }}
+            content={content()}
+            title="لیست خرید"
+          >
             <Badge
               count={basket.length}
               style={{ marginTop: 20, marginRight: 12 }}
@@ -54,7 +60,12 @@ const Header = () => {
               <ShopingCart />
             </Badge>
           </Popover>
-
+          <span marginleft={10}>
+            <Link to="/Dashboard" style={{ color: "black" }}>
+              <HomeOutlined style={{ fontSize: 25 }} />
+            </Link>
+          </span>
+          <Category />
           <Searchbox />
           <img src={logoImg} alt="" />
         </div>

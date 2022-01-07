@@ -12,7 +12,17 @@
   width: 40px;
   background-color: #eee;
 }
-.serchboxs
-{
-    margin-right: 150px;
+.serchboxs {
+  margin-right: 150px;
+}
+.icon {
+  padding-right: 25px;
+  background: url("../../img/searchicon.png") no-repeat right;
+  background-size: 20px;
+}
+input {
+  background-color: #eee !important;
+  border: none;
+  border-radius: 8px;
+  margin-left: 500px;
 }

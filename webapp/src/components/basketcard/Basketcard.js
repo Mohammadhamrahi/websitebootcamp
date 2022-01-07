@@ -1,18 +1,6 @@
-import { Card, Row, Col } from "antd";
+import {  Row, Col } from "antd";
 const Basketcard = ({ item }) => {
-  const { Meta } = Card;
   return (
-    // <Card
-    //   // onClick={() => hovercard}
-    //   hoverable
-    //   style={{ width: 280, borderRadius: "15px 15px" }}
-    //   cover={
-    //     <img width={100} height={280} alt="product_image" src={item.image} />
-    //   }
-    // >
-    //   <Meta title={item.title} description={item.price} />
-    //   <br />
-    // </Card>
     <Row>
       <Col xs={24} md={8}>
         <div>

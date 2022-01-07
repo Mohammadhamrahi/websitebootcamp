@@ -24,25 +24,27 @@ const ProductCard = ({ item }) => {
     }
   };
   return (
-    <Card
-      hoverable
-      style={{ width: 280, borderRadius: "15px 15px" }}
-      cover={
-        <img width={100} height={280} alt="product_image" src={item.image} />
-      }
-      actions={[
-        <Button
-          className="buttom"
-          onClick={addtobasket}
-          style={{ backgroundColor: "rgb(120, 138, 238", borderRadius: 8 }}
-        >
-          خرید
-        </Button>,
-      ]}
-    >
-      <Meta title={item.title} description={item.price} />
-      <br />
-    </Card>
+    <div>
+      <Card
+        hoverable
+        style={{ width: 280, borderRadius: "15px 15px" }}
+        cover={
+          <img width={100} height={280} alt="product_image" src={item.image} />
+        }
+        actions={[
+          <Button
+            className="buttom"
+            onClick={addtobasket}
+            style={{ backgroundColor: "rgb(120, 138, 238", borderRadius: 8 }}
+          >
+            خرید
+          </Button>,
+        ]}
+      >
+        <Meta title={item.title} description={item.price} />
+        <br />
+      </Card>
+    </div>
   );
 };
 export default ProductCard;
