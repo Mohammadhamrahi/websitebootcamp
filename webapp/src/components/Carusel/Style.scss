@@ -1,7 +1,9 @@
 .swiper {
   width: 100%;
   margin: 20px auto;
-  background-color: aqua;
+  background-color: #ef394e;
+  display: flex;
+  justify-content: space-between;
   .img {
     width: 280px;
     padding: 10px;
@@ -12,5 +14,10 @@
 .swiper .card {
   width: 280px;
   border-radius: 15px;
-  margin-left: 70px;
+}
+.swiper .carousel {
+  width: 80%;
+}
+.swiper .picture {
+  margin: 150px 30px 50px 0;
 }

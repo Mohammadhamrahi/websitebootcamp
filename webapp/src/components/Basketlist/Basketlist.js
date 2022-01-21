@@ -30,7 +30,7 @@ const Basketlist = () => {
     return (
       <div className="productbasket">
         <h1>سبد خرید</h1>
-        <div className="noproductbasket">خالیه</div>
+        <div className="noproductbasket">محصولی یافت نشد</div>
       </div>
     );
   }

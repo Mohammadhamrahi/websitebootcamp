@@ -1,18 +1,18 @@
-// import { ActionType } from "./ActionType";
+import { ActionType } from "./ActionType";
 
-// const initiallstate = {
-//   searchdata: [],
-// };
+const initiallstate = {
+  searchdata: [],
+};
 
-// export const searchReduser = (state = initiallstate, action) => {
-//   switch (action.type) {
-//     case ActionType.SEARCHBASKET:
-//       return {
-//         ...state,
-//         searchdata: action.payload,
-//       };
+export const searchReduser = (state = initiallstate, action) => {
+  switch (action.type) {
+    case ActionType.SEARCHTEMP:
+      return {
+        ...state,
+        searchdata: action.payload,
+      };
 
-//     default:
-//       break;
-//   }
-// };
+    default:
+      return state;
+  }
+};

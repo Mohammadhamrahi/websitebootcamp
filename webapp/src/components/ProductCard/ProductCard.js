@@ -24,7 +24,7 @@ const ProductCard = ({ item }) => {
     }
   };
   return (
-    <div>
+    <div style={{ marginTop: 30 }}>
       <Card
         hoverable
         style={{ width: 280, borderRadius: "15px 15px" }}

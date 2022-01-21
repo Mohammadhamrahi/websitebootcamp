@@ -47,27 +47,30 @@ const Header = () => {
     <Row>
       <Col xs={12} md={6} lg={24}>
         <div className="header">
-          <Popover
-            style={{ background: "#eee" }}
-            content={content()}
-            title="لیست خرید"
-          >
-            <Badge
-              count={basket.length}
-              style={{ marginTop: 20, marginRight: 12 }}
-              showZero
-            >
-              <ShopingCart />
-            </Badge>
-          </Popover>
-          <span marginleft={10}>
-            <Link to="/Dashboard" style={{ color: "black" }}>
-              <HomeOutlined style={{ fontSize: 25 }} />
-            </Link>
-          </span>
+          <div className=" headerleft">
+            <div>
+              <Popover content={content()} title="لیست خرید">
+                <Badge
+                  count={basket.length}
+                  style={{ marginTop: 20, marginRight: 12 }}
+                  showZero
+                >
+                  <ShopingCart />
+                </Badge>
+              </Popover>
+
+              <Link to="/Dashboard" style={{ color: "black" }}>
+                <HomeOutlined style={{ fontSize: 25 }} />
+              </Link>
+            </div>
+          </div>
+          <div className="search-container">
+            <Searchbox />
+            <img className="img" src={logoImg} alt="" />
+          </div>
+        </div>
+        <div className="category">
           <Category />
-          <Searchbox />
-          <img src={logoImg} alt="" />
         </div>
       </Col>
     </Row>

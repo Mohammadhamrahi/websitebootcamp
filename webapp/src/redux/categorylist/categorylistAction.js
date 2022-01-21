@@ -8,9 +8,10 @@ const getCategoryproduct = (name) => {
       dispatch({ type: actionTypes.GET_DATA_START_CATEGORY_LIST });
 
       const data = await axios.get(`${BASE_API}/products/category/${name}`);
+      console.log(data);
       dispatch({
         type: actionTypes.GET_DATA_SUCCESS_CATEGORY_LIST,
-        payload: data,
+        payload: data.data,
       });
     } catch (e) {
       dispatch({

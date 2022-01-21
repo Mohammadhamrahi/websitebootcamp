@@ -6,6 +6,7 @@ const getProducts = () => {
     try {
       dispatch({ type: actionTypes.GET_DATA_START });
       const { data } = await axios.get(`${BASE_API}/Products`);
+    
       dispatch({ type: actionTypes.GET_DATA_SUCCESS, payload: data });
     } catch (e) {
       console.log(e);

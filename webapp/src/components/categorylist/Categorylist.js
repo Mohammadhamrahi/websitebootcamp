@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Row, Col } from "antd";
+import { Row, Col, Skeleton } from "antd";
 import { useParams } from "react-router-dom";
 import categorylistAction from "../../redux/categorylist/categorylistAction";
 import ProductCard from "../ProductCard/ProductCard";
@@ -8,15 +8,14 @@ import ProductCard from "../ProductCard/ProductCard";
 const Categorylist = () => {
   const { name } = useParams();
   const dispatch = useDispatch();
-  const { data } = useSelector(
-    (state) => state.CategorylistReducer.categorylist
-  );
+  const data = useSelector((state) => state.CategorylistReducer.categorylist);
   console.log("categorylist", data);
   useEffect(() => {
     dispatch(categorylistAction.getCategoryproduct(name));
   }, [name]);
-  return (
-    <div>
+
+  return data.length > 0 ? (
+    <div marginTop={50}>
       <Row
         style={{
           backgroundColor: "#eee",
@@ -25,9 +24,9 @@ const Categorylist = () => {
         }}
         gutter={[0, 15]}
       >
-        {data.map((item) => (
+        {data.map((item, index) => (
           <Col
-            key={item.id}
+            key={index.id}
             className="product"
             xs={24}
             md={12}
@@ -39,6 +38,8 @@ const Categorylist = () => {
         ))}
       </Row>
     </div>
+  ) : (
+    <Skeleton />
   );
 };
 

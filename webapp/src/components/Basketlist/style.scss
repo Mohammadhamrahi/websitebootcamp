@@ -3,10 +3,17 @@
   height: 300px;
   background-color: #eee;
   margin-top: 70px;
+  border-radius: 15px;
   margin-left: 820px;
+  box-shadow: 10px 15px 10px rgb(133, 131, 131);
 }
 .productbasket {
   text-align: right;
   margin-right: 30px;
   margin-top: 30px;
+}
+.productbasket > div {
+  text-align: center;
+  margin-top: 15px;
+  padding-top: 25px;
 }

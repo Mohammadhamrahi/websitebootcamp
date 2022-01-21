@@ -2,7 +2,7 @@ import actionTypes from "../actionTypes";
 
 const initiallState = {
   categorylist: [],
-  loading: false,
+  loading: true,
   error: null,
 };
 

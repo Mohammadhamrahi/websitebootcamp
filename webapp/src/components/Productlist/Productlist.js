@@ -4,8 +4,8 @@ import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import ProductCard from "../ProductCard/ProductCard";
 import ProductActions from "../../redux/products/ProductsAction";
-import SwiperCarousel from "../Carusel/Carousel";
 import Carousel from "../Carusel/Carousel";
+import Slider from "../slider/Slider";
 
 const Productlist = () => {
   const dispatch = useDispatch();
@@ -22,12 +22,12 @@ const Productlist = () => {
       return (
         <Row
           style={{
-            backgroundColor: "#eee",
             marginTop: 15,
             borderRadius: " 15px 15px",
           }}
           gutter={[0, 15]}
         >
+          {/* <Slider /> */}
           <Carousel />
 
           {data.map((item) => (
